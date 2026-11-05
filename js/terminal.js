@@ -286,12 +286,12 @@ class PortfolioTerminal {
   handleAbout() {
     const text = `
 <div class="term-box">
-  <span class="term-accent term-bold">Sathvika V P</span> — 2nd-Year B.Tech AI & Data Science
+  <span class="term-accent term-bold">Sathvika V P</span> — B.Tech AI & Data Science (Class of 2029)
   <span class="term-dim">R.M.K. Engineering College | Chennai, India</span>
   <p>
-    "Curious by nature. Builder by habit." I learn best by getting my hands dirty:
-    building full-stack & GenAI applications, exploring data patterns in healthcare,
-    editing dynamic videos, and studying Japanese.
+    "Curious by nature. Builder by habit." Motivated AI & Data Science undergraduate
+    building practical machine learning applications, RAG chatbots (FileBot), semantic recruiter
+    systems, healthcare data pipelines, and exploring Japanese language & Kaizen.
   </p>
   <span class="term-dim">Shortcut: Tap the 'About' link on the navbar to read more.</span>
 </div>`;
@@ -304,17 +304,19 @@ class PortfolioTerminal {
   <span class="term-accent term-bold">MARTIAL-ARTS BELT SKILL RANKINGS:</span>
   <div class="term-grid">
     <div>🥋 <span class="term-belt-green">GREEN BELT (Proficient)</span>:
-      <br/>· HTML, CSS, JavaScript
-      <br/>· Database Management
-      <br/>· Data Analytics (Healthcare cleaning & viz)
-      <br/>· GenAI & Prompt Engineering
+      <br/>· Python, NLP & RAG Systems
+      <br/>· GenAI & LLM SDKs (LangChain, ChromaDB, FAISS, Ollama)
+      <br/>· HTML, CSS, JavaScript & Streamlit
+      <br/>· Database Management (DBMS / SQL)
+      <br/>· Healthcare Data Analytics & Cleaning
     </div>
     <div>🥋 <span class="term-belt-yellow">YELLOW BELT (Basics)</span>:
-      <br/>· Java (Core OOP & Algorithms)
-      <br/>· C++ (Problem Solving)
+      <br/>· Java (Core OOP & Data Structures)
+      <br/>· C++ & C (Problem Solving)
     </div>
     <div>🥋 <span class="term-belt-blue">BLUE BELT (Advanced Flow)</span>:
       <br/>· Video Editing & Motion Storytelling
+      <br/>· Tools: Git, GitHub, VS Code, Jupyter
     </div>
     <div>🥋 <span class="term-belt-white">WHITE BELT (Active Learning)</span>:
       <br/>· Japanese Language (Beginner)
@@ -330,24 +332,29 @@ class PortfolioTerminal {
   <span class="term-accent term-bold">FEATURED PROJECTS & INTERNSHIPS:</span>
   <ol class="term-project-list">
     <li>
+      <span class="term-bold">FileBot – RAG Chatbot</span>
+      <br/><span class="term-dim">Tech: Python, LangChain, ChromaDB, FAISS, Ollama, Streamlit</span>
+      <br/>Conversational document intelligence answering complex natural language queries from uploaded PDFs.
+    </li>
+    <li>
+      <span class="term-bold">Resume Ranking System</span>
+      <br/><span class="term-dim">Tech: Python, NLP, Semantic Similarity, Streamlit, Pandas</span>
+      <br/>AI recruiter dashboard ranking candidate resumes using semantic cosine similarity.
+    </li>
+    <li>
       <span class="term-bold">AgriConnect</span> ("Connect. Trade. Grow.")
       <br/><span class="term-dim">Tech: React, Node.js, Supabase, Gemini API, LangChain, ChromaDB</span>
-      <br/>LinkedIn for Agriculture connecting farmers to verified bulk buyers with multilingual UI & AI Assistant.
+      <br/>LinkedIn for Agriculture connecting farmers to verified bulk commercial buyers.
     </li>
     <li>
-      <span class="term-bold">EventPilot</span>
-      <br/><span class="term-dim">Tech: JavaScript, Generative AI</span>
-      <br/>GenAI event planning assistant automating budgets, vendors, roadmaps & run-of-show.
-    </li>
-    <li>
-      <span class="term-bold">Healthcare & Pharmacy Data Analytics Internship</span>
-      <br/><span class="term-dim">VirtualWorks Lab by Emogi (155 Hours) | Python, Pandas, Matplotlib</span>
+      <span class="term-bold">Healthcare & Pharmacy Data Analytics Internship (155h)</span>
+      <br/><span class="term-dim">VirtualWorks Lab by Emogi (Jul–Aug 2026) | Python, Pandas, Matplotlib</span>
       <br/>GitHub: <a href="https://github.com/sathvika1138/medical-dataset-cleaning-pipeline" target="_blank" rel="noopener" class="term-link">medical-dataset-cleaning-pipeline</a>
     </li>
     <li>
-      <span class="term-bold">Ghost in the Machine (Hacktoberfest DEV Challenge)</span>
+      <span class="term-bold">Ghost in the Machine</span> (Hacktoberfest DEV Challenge)
       <br/><span class="term-dim">Tech: Generative AI, HTML/CSS/JS</span>
-      <br/>Halloween AI interactive chat persona website.
+      <br/>Halloween AI interactive persona chat website.
     </li>
   </ol>
 </div>`;
@@ -436,7 +443,7 @@ class PortfolioTerminal {
   <ul class="term-contact-list">
     <li>💻 GitHub: <a href="https://github.com/sathvika1138" target="_blank" rel="noopener" class="term-link">github.com/sathvika1138</a></li>
     <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/sathvika-v-p-6172a7399" target="_blank" rel="noopener" class="term-link">linkedin.com/in/sathvika-v-p-6172a7399</a></li>
-    <li>✉️ Email: <a href="mailto:sathvika1138@gmail.com" class="term-link">sathvika1138@gmail.com</a></li>
+    <li>✉️ Email: <a href="mailto:sathvikavp2020@gmail.com" class="term-link">sathvikavp2020@gmail.com</a></li>
     <li>📄 Resume: <a href="assets/resume.pdf" download class="term-link">Download assets/resume.pdf</a></li>
   </ul>
 </div>`;

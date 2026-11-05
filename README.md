@@ -60,25 +60,29 @@ Located directly in the hero area with a clear hint banner (*"Type 'help' to exp
 ### 5. Skills & Tech Superpowers (Martial-Arts Belt System)
 Organized according to Japanese martial arts *Obi* belt rankings, celebrating hands-on craft:
 - **Green Belt (緑帯 - Proficient / Practical Builds)**:
-  - HTML, CSS, JavaScript (85%)
-  - Database Management (80%)
+  - Python, NLP & RAG Systems (88%)
+  - GenAI & LLM Frameworks — LangChain, ChromaDB, FAISS, Ollama, Gemini API (85%)
+  - HTML, CSS, JavaScript & Streamlit Dashboards (85%)
   - Data Analytics — Healthcare cleaning & visualization (85%)
-  - GenAI & Prompt Engineering (82%)
+  - Database Management Systems (DBMS / SQL / Supabase) (80%)
 - **Yellow Belt (黄帯 - Basics / Core OOP & Problem Solving)**:
   - Java (65%)
-  - C++ (60%)
+  - C++ & C (62%)
 - **Blue Belt (青帯 - Advanced / High Fluency & Flow)**:
-  - Video Editing & Storytelling (90%)
+  - Video Editing & Motion Storytelling (90%)
+  - Developer Tools — Git, GitHub, VS Code, Jupyter (86%)
 - **White Belt (白帯 - Beginner / Active Curiosity)**:
-  - Japanese Language (40%)
+  - Japanese Language (42%)
 - Includes a dedicated legend explaining belt levels and philosophy.
 
 ### 6. Projects & Experience
 Rich interactive cards with tech tags, feature bullet points, and repository/demo buttons:
-1. **AgriConnect** (*"Connect. Trade. Grow."*): A "LinkedIn for Agriculture" connecting farmers to verified bulk buyers with crop listings, multi-criteria matching, restock alerts, multilingual UI (English, Hindi, Bengali, Telugu, Marathi, Tamil), voice assistance, and AI agricultural copilot. (React, Node.js, Supabase, Gemini API, LangChain, ChromaDB).
-2. **EventPilot**: GenAI event planning assistant for weddings, birthdays, and community gatherings with budget planners, vendor checklists, roadmaps, run of show, guest matrix, and PDF exports. (JavaScript, GenAI).
-3. **Healthcare & Pharmacy Data Analytics Internship**: 155-hour completed internship at VirtualWorks Lab by Emogi (Jul–Aug 2026). Predictive pharmacy sales, adverse drug reaction (ADR) analysis, and automated data cleaning pipeline. ([GitHub Repository](https://github.com/sathvika1138/medical-dataset-cleaning-pipeline)).
-4. **Ghost in the Machine (Hacktoberfest Open-Source Challenge)**: Halloween AI chat website on DEV platform exploring AI personas, eerie conversational prompts, and retro styling.
+1. **FileBot – RAG Chatbot**: Conversational document intelligence chatbot answering questions from uploaded PDF documents using text chunking, embedding generation, vector databases (ChromaDB & FAISS), and LLM integration. (Python, RAG, LangChain, ChromaDB, FAISS, Streamlit, Ollama).
+2. **Resume Ranking System**: AI-powered resume screening and ranking system evaluating candidate profiles with NLP semantic similarity, automated score breakdowns, and an interactive recruiter dashboard. (Python, NLP, Semantic Similarity, Streamlit, Pandas).
+3. **AgriConnect** (*"Connect. Trade. Grow."*): A "LinkedIn for Agriculture" connecting farmers to verified bulk buyers with crop listings, multi-criteria matching, restock alerts, multilingual UI (English, Hindi, Bengali, Telugu, Marathi, Tamil), voice assistance, and AI agricultural copilot. (React, Node.js, Supabase, Gemini API, LangChain, ChromaDB).
+4. **Healthcare & Pharmacy Data Analytics Internship**: 155-hour completed internship at VirtualWorks Lab by Emogi (Jul–Aug 2026). Predictive pharmacy sales, adverse drug reaction (ADR) analysis, and automated data cleaning pipeline. ([GitHub Repository](https://github.com/sathvika1138/medical-dataset-cleaning-pipeline)).
+5. **EventPilot**: GenAI event planning assistant for weddings, birthdays, and community gatherings with budget planners, vendor checklists, roadmaps, run of show, guest matrix, and PDF exports. (JavaScript, GenAI).
+6. **Ghost in the Machine (Hacktoberfest Open-Source Challenge)**: Halloween AI chat website on DEV platform exploring AI personas, eerie conversational prompts, and retro styling.
 
 ### 7. Creative Feature B: Curiosity Passport (Challenges)
 A physical-style logbook grid of 8 challenge stamps:
@@ -101,7 +105,7 @@ A physical-style logbook grid of 8 challenge stamps:
 ### 8. Contact & Resume
 - GitHub: [github.com/sathvika1138](https://github.com/sathvika1138)
 - LinkedIn: [linkedin.com/in/sathvika-v-p-6172a7399](https://www.linkedin.com/in/sathvika-v-p-6172a7399)
-- Email: [sathvika1138@gmail.com](mailto:sathvika1138@gmail.com)
+- Email: [sathvikavp2020@gmail.com](mailto:sathvikavp2020@gmail.com)
 - Resume: Direct download link for `assets/resume.pdf`
 
 ---
@@ -225,17 +229,16 @@ All dynamic content is organized in clearly commented data arrays at the top of 
 Before public launch, you may replace the following remaining media and project links:
 
 - [x] **LinkedIn URL**: Configured to `https://www.linkedin.com/in/sathvika-v-p-6172a7399`.
-- [x] **Email Address**: Configured to `sathvika1138@gmail.com`.
+- [x] **Email Address**: Configured to `sathvikavp2020@gmail.com`.
 - [x] **GitHub Profile**: Configured to `https://github.com/sathvika1138`.
+- [x] **Resume PDF**: Generated formatted resume PDF at `assets/resume.pdf` with education, skills, projects, and coursework.
 - [ ] **Profile Photo**: Replace `assets/profile.jpg` with your own portrait photograph.
 - [ ] **Intro Video**: Replace `assets/intro.mp4` and `assets/intro-poster.jpg` with your personal video pitch.
-- [ ] **Resume PDF**: Replace `assets/resume.pdf` with your actual updated resume PDF.
-- [ ] **AgriConnect Live Demo**: Replace the demo button in `index.html` (Line 364) with your live app URL when deployed.
-- [ ] **AgriConnect GitHub Repository**: Replace the GitHub button in `index.html` (Line 368) with your repository URL.
-- [ ] **EventPilot Live Demo**: Replace the demo button in `index.html` (Line 398) with your live app URL.
-- [ ] **EventPilot GitHub Repository**: Replace the GitHub button in `index.html` (Line 402) with your repository URL.
-- [ ] **Ghost in the Machine Live Demo**: Replace the demo button in `index.html` (Line 465) with your live demo URL.
-- [ ] **Ghost in the Machine GitHub Repository**: Replace the GitHub button in `index.html` (Line 469) with your repository URL.
+- [ ] **FileBot Live Demo & GitHub**: Add your demo and repository URLs in `index.html`.
+- [ ] **Resume Ranking System Live Demo & GitHub**: Add your demo and repository URLs in `index.html`.
+- [ ] **AgriConnect Live Demo & GitHub**: Add your demo and repository URLs in `index.html`.
+- [ ] **EventPilot Live Demo & GitHub**: Add your demo and repository URLs in `index.html`.
+- [ ] **Ghost in the Machine Live Demo & GitHub**: Add your demo and repository URLs in `index.html`.
 
 ---
 

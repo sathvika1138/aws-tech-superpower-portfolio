@@ -12,36 +12,44 @@
 // ==========================================
 const SKILLS_DATA = [
   {
-    category: "Languages & Frameworks",
-    name: "HTML, CSS, JavaScript",
+    category: "AI & Machine Learning",
+    name: "Python, NLP & RAG",
     belt: "green",
     beltTitle: "Green Belt (Proficient)",
-    proficiency: "85%",
-    description: "Modern semantic HTML5, responsive CSS grid/flexbox, ES6+ JavaScript, DOM architecture."
-  },
-  {
-    category: "Databases & Cloud",
-    name: "Database Management",
-    belt: "green",
-    beltTitle: "Green Belt (Proficient)",
-    proficiency: "80%",
-    description: "Relational data schema design, SQL querying, Supabase & PostgreSQL integration."
-  },
-  {
-    category: "Data Science & AI",
-    name: "Data Analytics (Healthcare & Viz)",
-    belt: "green",
-    beltTitle: "Green Belt (Proficient)",
-    proficiency: "85%",
-    description: "Pandas, NumPy, data cleaning pipelines, adverse drug reaction trends & predictive analytics."
+    proficiency: "88%",
+    description: "Hands-on machine learning, document chunking, semantic similarity, FAISS/ChromaDB vector stores."
   },
   {
     category: "Generative AI",
-    name: "GenAI & Prompt Engineering",
+    name: "GenAI & LLM Frameworks",
     belt: "green",
     beltTitle: "Green Belt (Proficient)",
-    proficiency: "82%",
-    description: "Gemini API, LangChain, ChromaDB embeddings, chain-of-thought prompt optimization."
+    proficiency: "85%",
+    description: "LangChain, ChromaDB, FAISS, Ollama, Google Generative AI SDK, prompt engineering."
+  },
+  {
+    category: "Web & UI Frameworks",
+    name: "HTML, CSS, JavaScript & Streamlit",
+    belt: "green",
+    beltTitle: "Green Belt (Proficient)",
+    proficiency: "85%",
+    description: "Semantic web architecture, responsive CSS layout, vanilla JavaScript, interactive recruiter dashboards."
+  },
+  {
+    category: "Data Science & Analytics",
+    name: "Data Analytics & Cleaning",
+    belt: "green",
+    beltTitle: "Green Belt (Proficient)",
+    proficiency: "85%",
+    description: "Pandas, NumPy, automated data cleaning pipelines, adverse drug reaction trends, exploratory viz."
+  },
+  {
+    category: "Databases & Systems",
+    name: "Database Management (DBMS)",
+    belt: "green",
+    beltTitle: "Green Belt (Proficient)",
+    proficiency: "80%",
+    description: "Relational data schema design, SQL querying, Supabase & PostgreSQL cloud integration."
   },
   {
     category: "Core Programming",
@@ -49,15 +57,15 @@ const SKILLS_DATA = [
     belt: "yellow",
     beltTitle: "Yellow Belt (Basics)",
     proficiency: "65%",
-    description: "Object-oriented programming, core data structures, algorithms, foundational logic."
+    description: "Object-oriented programming (OOP), core data structures, algorithms, foundational logic."
   },
   {
-    category: "Systems & Logic",
-    name: "C++",
+    category: "Systems Programming",
+    name: "C++ & C",
     belt: "yellow",
     beltTitle: "Yellow Belt (Basics)",
-    proficiency: "60%",
-    description: "Algorithmic problem solving, memory concepts, standard template library (STL)."
+    proficiency: "62%",
+    description: "Algorithmic problem solving, pointer concepts, standard template library (STL)."
   },
   {
     category: "Creative Media",
@@ -65,15 +73,23 @@ const SKILLS_DATA = [
     belt: "blue",
     beltTitle: "Blue Belt (Advanced)",
     proficiency: "90%",
-    description: "Dynamic pacing, motion graphics, storytelling, audio synchronization & color grading."
+    description: "Dynamic pacing, motion storytelling, visual rhythm, audio synchronization & color grading."
+  },
+  {
+    category: "Developer Tools",
+    name: "Git, GitHub & VS Code",
+    belt: "blue",
+    beltTitle: "Blue Belt (Advanced)",
+    proficiency: "86%",
+    description: "Version control hygiene, branch workflows, open-source PRs, Jupyter Notebooks."
   },
   {
     category: "Languages & Culture",
     name: "Japanese (日本語)",
     belt: "white",
     beltTitle: "White Belt (Learning)",
-    proficiency: "40%",
-    description: "Hiragana, Katakana, beginner Kanji, conversational phrases & grammar fundamentals."
+    proficiency: "42%",
+    description: "Hiragana, Katakana, beginner Kanji, conversational phrases, embracing the Kaizen philosophy."
   }
 ];
 
