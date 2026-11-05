@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sathvika V P | The Curious Builder · AI & Data Science</title>
+  
+  <!-- Meta Information -->
+  <meta name="description" content="Portfolio of Sathvika V P, 2nd-year B.Tech Artificial Intelligence and Data Science student at R.M.K. Engineering College. Curious builder, challenge collector, video editor, and Japanese learner.">
+  <meta name="author" content="Sathvika V P">
+  <meta name="theme-color" content="#0B0F19">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sathvika V P | The Curious Builder · AI & Data Science">
+  <meta property="og:description" content="Curious by nature. Builder by habit. Explore interactive terminal, martial-arts skill belts, and the Curiosity Passport.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sathvika V P | The Curious Builder">
+  <meta name="twitter:description" content="Portfolio of Sathvika V P — B.Tech AI & Data Science student, builder & challenge collector.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY TOP NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#home" class="brand-link" aria-label="Sathvika V P Home">
+        <span class="brand-name">Sathvika V P</span>
+        <span class="brand-badge">&lt;/&gt;</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main Navigation">
+        <ul id="primary-nav-menu" class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#challenges" class="nav-link">Challenges</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="nav-actions">
+        <!-- Light / Dark Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Switch theme mode" title="Toggle Light/Dark Theme">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER
+       ======================================================================== -->
+  <main id="main-content" role="main">
+
+    <!-- --------------------------------------------------------------------
+         1. HERO SECTION (HOME)
+         -------------------------------------------------------------------- -->
+    <section id="home" class="hero-section section-pad">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column: Intro & Typing -->
+          <div class="hero-intro-column">
+            <div class="hero-badge">
+              <span class="badge-dot" aria-hidden="true">●</span>
+              <span>2nd-Year B.Tech AI &amp; DS @ R.M.K. Engineering College</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hello, I'm <br>
+              <span id="typing-name" class="typing-text">Sathvika V P</span><span class="cursor" aria-hidden="true">|</span>
+            </h1>
+
+            <p class="hero-tagline">"Curious by nature. Builder by habit."</p>
+
+            <p class="hero-bio-short">
+              A curious builder who loves turning ambitious ideas into reality. I collect engineering challenges,
+              architect full-stack &amp; GenAI applications, dive deep into healthcare data analytics, edit dynamic video stories, and study Japanese.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#terminal-section" class="btn btn-secondary">
+                <span>Explore my terminal</span>
+                <span aria-hidden="true">⚡</span>
+              </a>
+              <!-- RESUME DOWNLOAD PLACEHOLDER: Replace assets/resume.pdf with your actual PDF -->
+              <a href="assets/resume.pdf" class="btn btn-outline" download="Sathvika_V_P_Resume.pdf">
+                <span>Download Resume</span>
+                <span aria-hidden="true">📄</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Intro Video Slot -->
+          <div class="hero-media-wrap" id="intro-video-container">
+            <div class="intro-video-card">
+              <!-- 
+                ==================================================================
+                INTRO VIDEO PLACEHOLDER INSTRUCTION:
+                Replace 'assets/intro.mp4' with your actual video clip.
+                Update 'poster="assets/intro-poster.jpg"' with your video thumbnail.
+                ==================================================================
+              -->
+              <div class="video-element-container">
+                <video id="intro-video" class="intro-video" controls preload="none" poster="assets/intro-poster.jpg" playsinline>
+                  <source src="assets/intro.mp4" type="video/mp4">
+                  <p>Your browser doesn't support HTML5 video. Here is a <a href="assets/intro.mp4">link to the video</a> instead.</p>
+                </video>
+              </div>
+              <div class="video-caption">
+                <span>🎬 Quick 60-Second Video Intro</span>
+                <span class="video-hint-pill">Click to Play</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         CREATIVE FEATURE A: INTERACTIVE TERMINAL
+         -------------------------------------------------------------------- -->
+    <section id="terminal-section" class="terminal-section" aria-labelledby="terminal-heading">
+      <div class="container">
+        <div class="terminal-wrapper">
+          
+          <!-- Visible Hint Banner directly above terminal -->
+          <div class="terminal-hint-banner">
+            <div class="hint-text">
+              <span class="hint-icon" aria-hidden="true">💡</span>
+              <span id="terminal-heading">Type 'help' to explore me, or tap a command below</span>
+            </div>
+            <span class="terminal-hint-badge">Esc to blur</span>
+          </div>
+
+          <!-- Terminal Window Container -->
+          <div class="terminal-window" id="terminal-window" role="region" aria-label="Interactive Developer Terminal">
+            <!-- Terminal Header -->
+            <div class="terminal-window-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">sathvika@portfolio:~$</div>
+              <div class="terminal-window-actions">
+                <button type="button" class="term-action-btn" id="terminal-clear-action" aria-label="Clear terminal output">Clear</button>
+              </div>
+            </div>
+
+            <!-- Terminal Output and Input Body -->
+            <div class="terminal-body">
+              <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+              
+              <!-- Prompt Line -->
+              <div class="term-prompt-line">
+                <span class="term-prompt-label" aria-hidden="true">sathvika@portfolio:~$</span>
+                <input 
+                  type="text" 
+                  id="terminal-input" 
+                  class="terminal-input" 
+                  autocomplete="off" 
+                  autocorrect="off" 
+                  autocapitalize="off" 
+                  spellcheck="false" 
+                  aria-label="Terminal command input" 
+                  placeholder="type command here..."
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Clickable Command Suggestions for Mobile and Quick Clicks -->
+          <div class="terminal-chips-bar" aria-label="Quick Terminal Commands">
+            <span class="terminal-chip-label">Quick Commands:</span>
+            <div id="terminal-chips" class="terminal-chips-list"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         2. ABOUT ME SECTION
+         -------------------------------------------------------------------- -->
+    <section id="about" class="about-section section-pad">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <span class="section-kicker">01. Discovery</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging curious minds with actionable code, data science, and creative media.</p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Photo Placeholder Card -->
+          <div class="profile-card-wrap fade-on-scroll">
+            <div class="profile-img-container">
+              <!-- 
+                ==============================================================
+                PROFILE PHOTO PLACEHOLDER:
+                Replace 'assets/profile.jpg' with your portrait image.
+                ==============================================================
+              -->
+              <img src="assets/profile.jpg" alt="Portrait photo placeholder of Sathvika V P" class="profile-img" loading="lazy">
+              <div class="profile-status-pill">
+                <span>🟢 Always curious &amp; building</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Story & Key Pillars -->
+          <div class="about-text-content fade-on-scroll">
+            <p class="about-lead">
+              Hi, I'm <strong>Sathvika</strong>, a second-year B.Tech student in Artificial Intelligence and Data Science. I'm a curious person who learns by doing: I've taken part in many challenges and programs, built full-stack and GenAI projects, completed a healthcare data analytics internship, and I'm learning Japanese along the way. I also enjoy video editing.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <span class="pillar-icon">🎓</span>
+                <h3 class="pillar-title">R.M.K. Engineering College</h3>
+                <p class="pillar-sub">B.Tech Artificial Intelligence &amp; Data Science (2nd Year)</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-icon">🏥</span>
+                <h3 class="pillar-title">Healthcare Analytics</h3>
+                <p class="pillar-sub">155 Hours at VirtualWorks Lab by Emogi (Jul–Aug 2026)</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-icon">🌸</span>
+                <h3 class="pillar-title">Japanese Language</h3>
+                <p class="pillar-sub">Embracing Kaizen &amp; linguistic curiosity step-by-step</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-icon">🎬</span>
+                <h3 class="pillar-title">Video Editing</h3>
+                <p class="pillar-sub">Motion storytelling, creative pacing &amp; audio editing</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         3. SKILLS / TECH SUPERPOWERS (MARTIAL-ARTS BELT SYSTEM)
+         -------------------------------------------------------------------- -->
+    <section id="skills" class="skills-section section-pad">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <span class="section-kicker">02. Superpowers</span>
+          <h2 class="section-title">Skills &amp; Martial-Arts Belt Ranking</h2>
+          <p class="section-subtitle">
+            Inspired by the Japanese martial arts <em>Obi</em> ranking and the philosophy of <em>Kaizen</em> (continuous improvement). Every skill is forged through deliberate, hands-on practice.
+          </p>
+        </div>
+
+        <!-- Belt Legend -->
+        <div class="skills-legend-card fade-on-scroll">
+          <h3 class="legend-title">
+            <span>🥋</span>
+            <span>Belt Ranking Legend</span>
+          </h3>
+          <div class="legend-items-row">
+            <div class="legend-item">
+              <span class="legend-belt-dot dot-white" aria-hidden="true"></span>
+              <div><strong>White Belt (白帯)</strong>: Beginner / Active Curiosity &amp; Exploring Fundamentals</div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-belt-dot dot-yellow" aria-hidden="true"></span>
+              <div><strong>Yellow Belt (黄帯)</strong>: Basics / Building Core OOP &amp; Problem Solving</div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-belt-dot dot-green" aria-hidden="true"></span>
+              <div><strong>Green Belt (緑帯)</strong>: Proficient / Hands-on Project &amp; Analytics Craft</div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-belt-dot dot-blue" aria-hidden="true"></span>
+              <div><strong>Blue Belt (青帯)</strong>: Advanced / Creative Fluency &amp; Polished Execution</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rendered Skills Grid (Driven by editable data array in js/main.js) -->
+        <div id="skills-grid" class="skills-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         4. PROJECTS & ACHIEVEMENTS SECTION
+         -------------------------------------------------------------------- -->
+    <section id="projects" class="projects-section section-pad">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <span class="section-kicker">03. Craftsmanship</span>
+          <h2 class="section-title">Projects &amp; Experience</h2>
+          <p class="section-subtitle">A showcase of full-stack ecosystems, GenAI copilots, healthcare analytics pipelines, and open-source challenges.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: AgriConnect -->
+          <article class="project-card fade-on-scroll">
+            <div class="project-card-header">
+              <span class="project-type-tag">Full-Stack &amp; GenAI</span>
+            </div>
+            <h3 class="project-title">AgriConnect</h3>
+            <p class="project-tagline">"Connect. Trade. Grow."</p>
+            <p class="project-description">
+              A "LinkedIn for Agriculture" platform connecting farmers directly with verified bulk buyers (restaurants, hotels, messes). Eliminates middlemen with transparent marketplace trading.
+            </p>
+            <ul class="project-features-list">
+              <li>Crop listings &amp; transparent multi-criteria matching algorithm</li>
+              <li>Restock "Notify me" alerts &amp; real-time notifications</li>
+              <li>Multilingual UI: English, Hindi, Bengali, Telugu, Marathi, Tamil</li>
+              <li>Voice assistance &amp; interactive AI agricultural advisor</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">ChromaDB</span>
+            </div>
+            <div class="project-actions">
+              <!-- TODO PLACEHOLDER: Add your Live Demo URL below when ready -->
+              <button type="button" class="btn btn-primary btn-sm" data-todo="AgriConnect Live Demo URL: Replace with your deployed app URL">
+                <span>Live Demo [TODO]</span>
+              </button>
+              <!-- TODO PLACEHOLDER: Add your GitHub Repository URL below when ready -->
+              <button type="button" class="btn btn-outline btn-sm" data-todo="AgriConnect GitHub Repository URL: Replace with your repository link">
+                <span>GitHub [TODO]</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: EventPilot -->
+          <article class="project-card fade-on-scroll">
+            <div class="project-card-header">
+              <span class="project-type-tag">Generative AI Assistant</span>
+            </div>
+            <h3 class="project-title">EventPilot</h3>
+            <p class="project-tagline">Intelligent Event Orchestration</p>
+            <p class="project-description">
+              A GenAI-powered event planning assistant for weddings, birthdays, and community gatherings. Transforms disorganized event logistics into clean, executable timelines.
+            </p>
+            <ul class="project-features-list">
+              <li>Dynamic budget planner &amp; categorized vendor checklist</li>
+              <li>Milestone roadmap &amp; minute-by-minute run of show</li>
+              <li>Interactive guest matrix &amp; seating logistics</li>
+              <li>AI Copilot recommendations with one-click PDF export</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">GenAI</span>
+              <span class="tech-tag">CSS3 / Flexbox</span>
+              <span class="tech-tag">PDF Generation</span>
+            </div>
+            <div class="project-actions">
+              <!-- TODO PLACEHOLDER: Add your Live Demo URL below when ready -->
+              <button type="button" class="btn btn-primary btn-sm" data-todo="EventPilot Live Demo URL: Replace with your deployed app URL">
+                <span>Live Demo [TODO]</span>
+              </button>
+              <!-- TODO PLACEHOLDER: Add your GitHub Repository URL below when ready -->
+              <button type="button" class="btn btn-outline btn-sm" data-todo="EventPilot GitHub Repository URL: Replace with your repository link">
+                <span>GitHub [TODO]</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Healthcare Data Analytics Internship -->
+          <article class="project-card fade-on-scroll">
+            <div class="project-card-header">
+              <span class="project-type-tag">Industry Internship · 155h</span>
+            </div>
+            <h3 class="project-title">Healthcare &amp; Pharmacy Data Analytics</h3>
+            <p class="project-tagline">VirtualWorks Lab by Emogi (Jul–Aug 2026)</p>
+            <p class="project-description">
+              Completed an intensive 155-hour healthcare data analytics internship solving complex pharmaceutical sales trends, patient data cleaning, and adverse drug reaction (ADR) detection.
+            </p>
+            <ul class="project-features-list">
+              <li>Predictive analytics modeling for pharmacy sales velocity</li>
+              <li>Adverse drug reaction (ADR) correlation &amp; pattern recognition</li>
+              <li>Automated medical dataset cleaning pipeline with error correction</li>
+              <li>Interactive visual data reports &amp; exploratory analytics</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Data Cleaning</span>
+              <span class="tech-tag">Predictive Analytics</span>
+              <span class="tech-tag">Matplotlib</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/sathvika1138/medical-dataset-cleaning-pipeline" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>View GitHub Pipeline</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <span class="tech-tag" style="border-color: #10B981; color: #10B981;">155h Completed</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Hacktoberfest Open-Source Challenge -->
+          <article class="project-card fade-on-scroll">
+            <div class="project-card-header">
+              <span class="project-type-tag">Open-Source Challenge</span>
+            </div>
+            <h3 class="project-title">Ghost in the Machine</h3>
+            <p class="project-tagline">Hacktoberfest Open-Source AI Challenge (DEV)</p>
+            <p class="project-description">
+              Halloween-themed "Ghost in the Machine" interactive AI conversational website. Designed an eerie, atmospheric persona blending prompt engineering with dynamic retro web styling.
+            </p>
+            <ul class="project-features-list">
+              <li>Thematic spooky persona prompts &amp; responsive dialogues</li>
+              <li>Interactive vintage CRT terminal aesthetic &amp; soundscapes</li>
+              <li>Lightweight vanilla client integration with GenAI endpoints</li>
+              <li>Public open-source contribution during Hacktoberfest</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Prompt Engineering</span>
+              <span class="tech-tag">GenAI</span>
+            </div>
+            <div class="project-actions">
+              <!-- TODO PLACEHOLDER: Add your Live Demo URL below when ready -->
+              <button type="button" class="btn btn-primary btn-sm" data-todo="Ghost in the Machine Live Demo URL: Replace with your demo link">
+                <span>Live Demo [TODO]</span>
+              </button>
+              <!-- TODO PLACEHOLDER: Add your GitHub Repository URL below when ready -->
+              <button type="button" class="btn btn-outline btn-sm" data-todo="Ghost in the Machine GitHub Repository URL: Replace with your repository link">
+                <span>GitHub [TODO]</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         5. CHALLENGES SECTION: CURIOSITY PASSPORT (CREATIVE FEATURE B)
+         -------------------------------------------------------------------- -->
+    <section id="challenges" class="passport-section section-pad">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <span class="section-kicker">04. Milestones</span>
+          <h2 class="section-title">The Curiosity Passport</h2>
+          <p class="section-subtitle">
+            A real builder never stops collecting challenges. Click on any stamp to unlock its story, or use the terminal command <code style="color:var(--accent);">passport &lt;name&gt;</code>.
+          </p>
+        </div>
+
+        <!-- Passport Official Status Banner -->
+        <div class="passport-banner fade-on-scroll">
+          <div class="passport-meta">
+            <span class="passport-official-label">Official Curiosity Passport · Sathvika V P</span>
+            <div class="passport-progress-status" id="passport-counter">3/8 stamps collected</div>
+            <div class="passport-progress-bar-wrap">
+              <div id="passport-progress-fill" class="passport-progress-fill" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" aria-label="Curiosity passport stamp collection progress"></div>
+            </div>
+          </div>
+          <div class="passport-controls">
+            <button type="button" class="btn btn-secondary btn-sm" id="passport-collect-all-btn">Collect All ✦</button>
+            <button type="button" class="btn btn-outline btn-sm" id="passport-reset-btn">Reset</button>
+          </div>
+        </div>
+
+        <!-- Passport Stamps Grid (Loaded from editable PASSPORT_STAMPS array in js/passport.js) -->
+        <div id="passport-grid" class="passport-grid fade-on-scroll"></div>
+
+        <!-- Hidden Completion Card (Revealed when all 8 stamps are collected) -->
+        <div id="passport-completion-card" class="passport-completion-card" role="alert">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;" aria-hidden="true">🎉 💮 🚀</div>
+          <h3 class="completion-heading">Curiosity Collected!</h3>
+          <p class="completion-message">
+            "Curiosity collected. Thanks for exploring, I'd love to build something with you."
+          </p>
+          <a href="#contact" class="btn btn-primary">Let's Connect &amp; Collaborate →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         6. CONTACT SECTION
+         -------------------------------------------------------------------- -->
+    <section id="contact" class="contact-section section-pad">
+      <div class="container">
+        
+        <div class="contact-card-wrap fade-on-scroll">
+          <span class="contact-kicker">05. Communication</span>
+          <h2 class="contact-title">Let's Build Something Meaningful</h2>
+          <p class="contact-bio">
+            Whether you have a full-stack idea, a data analytics challenge, an open-source collaboration, or just want to practice Japanese together — my inbox is always open!
+          </p>
+
+          <!-- Contact Channels Grid -->
+          <div class="contact-channels-grid">
+            
+            <!-- GitHub Link -->
+            <a href="https://github.com/sathvika1138" target="_blank" rel="noopener noreferrer" class="contact-channel-item" aria-label="Visit Sathvika's GitHub Profile">
+              <span class="channel-icon" aria-hidden="true">💻</span>
+              <span class="channel-name">GitHub</span>
+              <span class="channel-detail">@sathvika1138</span>
+            </a>
+
+            <!-- LinkedIn [TODO Placeholder] -->
+            <!-- TODO PLACEHOLDER: Replace href with your actual LinkedIn profile link, e.g. https://linkedin.com/in/sathvika-vp -->
+            <a href="#" class="contact-channel-item" data-todo="LinkedIn Profile URL: Replace href in index.html with https://linkedin.com/in/your-profile" aria-label="Visit Sathvika's LinkedIn profile">
+              <span class="channel-icon" aria-hidden="true">💼</span>
+              <span class="channel-name">LinkedIn</span>
+              <span class="channel-detail">[TODO: Add Profile Link]</span>
+            </a>
+
+            <!-- Email [TODO Placeholder] -->
+            <!-- TODO PLACEHOLDER: Replace href with your actual email mailto link, e.g. mailto:sathvika@example.com -->
+            <a href="mailto:TODO_REPLACE_WITH_YOUR_EMAIL@example.com" class="contact-channel-item" data-todo="Email Address: Replace mailto href in index.html with your actual email address" aria-label="Send an email to Sathvika">
+              <span class="channel-icon" aria-hidden="true">✉️</span>
+              <span class="channel-name">Email</span>
+              <span class="channel-detail">[TODO: Add Email]</span>
+            </a>
+
+          </div>
+
+          <!-- Bottom Contact Actions -->
+          <div class="contact-cta-row">
+            <a href="mailto:TODO_REPLACE_WITH_YOUR_EMAIL@example.com" class="btn btn-primary" data-todo="Email Address: Configure your email address in index.html">
+              <span>Send Me a Message</span>
+              <span aria-hidden="true">✉️</span>
+            </a>
+            <!-- RESUME DOWNLOAD PLACEHOLDER -->
+            <a href="assets/resume.pdf" class="btn btn-secondary" download="Sathvika_V_P_Resume.pdf">
+              <span>Download Resume (PDF)</span>
+              <span aria-hidden="true">📄</span>
+            </a>
+          </div>
+
+          <div class="contact-terminal-note">
+            <span>✨ Pro-tip: Open the terminal and type <code>sudo hire-sathvika</code> for an easter egg!</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div>
+        <span class="footer-curiosity-tag">Built with curiosity · Hosted on AWS Amplify</span>
+      </div>
+      <div>
+        <span>© 2026 Sathvika V P · R.M.K. Engineering College</span>
+      </div>
+      <div>
+        <a href="#home" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to top</span>
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confetti Canvas Anchor (Created dynamically by js/main.js when needed) -->
+
+  <!-- ========================================================================
+       SCRIPTS (Vanilla JavaScript only, No external dependencies)
+       ======================================================================== -->
+  <script src="js/passport.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
