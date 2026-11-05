@@ -418,3 +418,4 @@ class CuriosityPassport {
 document.addEventListener("DOMContentLoaded", () => {
   window.CuriosityPassport = new CuriosityPassport();
 });
+
