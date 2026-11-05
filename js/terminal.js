@@ -435,8 +435,8 @@ class PortfolioTerminal {
   <span class="term-accent term-bold">CONTACT DIRECTORY:</span>
   <ul class="term-contact-list">
     <li>💻 GitHub: <a href="https://github.com/sathvika1138" target="_blank" rel="noopener" class="term-link">github.com/sathvika1138</a></li>
-    <li>💼 LinkedIn: <span class="term-dim">[TODO: Add your LinkedIn profile URL]</span></li>
-    <li>✉️ Email: <span class="term-dim">[TODO: Add your email address]</span></li>
+    <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/sathvika-v-p-6172a7399" target="_blank" rel="noopener" class="term-link">linkedin.com/in/sathvika-v-p-6172a7399</a></li>
+    <li>✉️ Email: <a href="mailto:sathvika1138@gmail.com" class="term-link">sathvika1138@gmail.com</a></li>
     <li>📄 Resume: <a href="assets/resume.pdf" download class="term-link">Download assets/resume.pdf</a></li>
   </ul>
 </div>`;
@@ -526,3 +526,4 @@ class PortfolioTerminal {
 document.addEventListener("DOMContentLoaded", () => {
   window.PortfolioTerminal = new PortfolioTerminal();
 });
+

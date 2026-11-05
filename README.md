@@ -100,8 +100,8 @@ A physical-style logbook grid of 8 challenge stamps:
 
 ### 8. Contact & Resume
 - GitHub: [github.com/sathvika1138](https://github.com/sathvika1138)
-- LinkedIn: Profile link placeholder
-- Email: `mailto:` link placeholder
+- LinkedIn: [linkedin.com/in/sathvika-v-p-6172a7399](https://www.linkedin.com/in/sathvika-v-p-6172a7399)
+- Email: [sathvika1138@gmail.com](mailto:sathvika1138@gmail.com)
 - Resume: Direct download link for `assets/resume.pdf`
 
 ---
@@ -220,23 +220,25 @@ All dynamic content is organized in clearly commented data arrays at the top of 
 
 ---
 
-## 📝 TODO Placeholders to Fill In
+## 📝 Remaining Optional Customizations
 
-Before public launch, Sathvika should replace the following placeholders:
+Before public launch, you may replace the following remaining media and project links:
 
-- [ ] **LinkedIn URL**: Replace `href="#"` in `index.html` (Lines 444-448) with your personal LinkedIn profile (e.g., `https://linkedin.com/in/sathvika-vp`).
-- [ ] **Email Address**: Replace `TODO_REPLACE_WITH_YOUR_EMAIL@example.com` in `index.html` (Lines 451 & 460) with your actual email address.
+- [x] **LinkedIn URL**: Configured to `https://www.linkedin.com/in/sathvika-v-p-6172a7399`.
+- [x] **Email Address**: Configured to `sathvika1138@gmail.com`.
+- [x] **GitHub Profile**: Configured to `https://github.com/sathvika1138`.
 - [ ] **Profile Photo**: Replace `assets/profile.jpg` with your own portrait photograph.
-- [ ] **Intro Video**: Replace `assets/intro.mp4` and `assets/intro-poster.jpg` with your 60-second video elevator pitch.
-- [ ] **Resume PDF**: Replace `assets/resume.pdf` with your actual updated resume.
-- [ ] **AgriConnect Live Demo**: Replace the demo button in `index.html` (Line 294) with your live app URL when deployed.
-- [ ] **AgriConnect GitHub Repository**: Replace the GitHub button in `index.html` (Line 298) with your repository URL.
-- [ ] **EventPilot Live Demo**: Replace the demo button in `index.html` (Line 331) with your live app URL.
-- [ ] **EventPilot GitHub Repository**: Replace the GitHub button in `index.html` (Line 335) with your repository URL.
-- [ ] **Ghost in the Machine Live Demo**: Replace the demo button in `index.html` (Line 389) with your live demo URL.
-- [ ] **Ghost in the Machine GitHub Repository**: Replace the GitHub button in `index.html` (Line 393) with your repository URL.
+- [ ] **Intro Video**: Replace `assets/intro.mp4` and `assets/intro-poster.jpg` with your personal video pitch.
+- [ ] **Resume PDF**: Replace `assets/resume.pdf` with your actual updated resume PDF.
+- [ ] **AgriConnect Live Demo**: Replace the demo button in `index.html` (Line 364) with your live app URL when deployed.
+- [ ] **AgriConnect GitHub Repository**: Replace the GitHub button in `index.html` (Line 368) with your repository URL.
+- [ ] **EventPilot Live Demo**: Replace the demo button in `index.html` (Line 398) with your live app URL.
+- [ ] **EventPilot GitHub Repository**: Replace the GitHub button in `index.html` (Line 402) with your repository URL.
+- [ ] **Ghost in the Machine Live Demo**: Replace the demo button in `index.html` (Line 465) with your live demo URL.
+- [ ] **Ghost in the Machine GitHub Repository**: Replace the GitHub button in `index.html` (Line 469) with your repository URL.
 
 ---
 
 ## 📜 License
 This project is open-source and available under the [MIT License](LICENSE). Built with curiosity by Sathvika V P.
+
