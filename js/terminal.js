@@ -417,22 +417,32 @@ class PortfolioTerminal {
 
   handleVideo() {
     const videoSection = document.getElementById("intro-video-container");
-    const video = document.getElementById("intro-video");
 
     if (videoSection) {
       videoSection.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    if (video) {
-      if (video.paused) {
-        video.play().catch(() => {});
-        this.printHTML("<span class=\"term-success\">▶ Playing intro video... Enjoy!</span>");
+    if (window.PitchPlayer) {
+      if (window.PitchPlayer.isPlaying) {
+        window.PitchPlayer.pause();
+        this.printHTML("<span class=\"term-dim\">⏸ 60-Second Elevator Pitch paused.</span>");
       } else {
-        video.pause();
-        this.printHTML("<span class=\"term-dim\">⏸ Intro video paused.</span>");
+        window.PitchPlayer.play();
+        this.printHTML("<span class=\"term-success\">▶ Playing 60-Second Elevator Pitch presentation... Enjoy!</span>");
       }
     } else {
-      this.printLine("Intro video player located in the Hero section.");
+      const video = document.getElementById("intro-video");
+      if (video) {
+        if (video.paused) {
+          video.play().catch(() => {});
+          this.printHTML("<span class=\"term-success\">▶ Playing video...</span>");
+        } else {
+          video.pause();
+          this.printHTML("<span class=\"term-dim\">⏸ Video paused.</span>");
+        }
+      } else {
+        this.printLine("Intro video player located in the Hero section.");
+      }
     }
   }
 

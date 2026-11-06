@@ -401,17 +401,313 @@ function initTodoButtons() {
 }
 
 // ==========================================
-// 9. VIDEO PLACEHOLDER HANDLING
+// 9. 60-SECOND VIRTUAL PITCH & VIDEO CONTROLLER
 // ==========================================
-function initVideoPlayer() {
-  const video = document.getElementById("intro-video");
-  if (!video) return;
+class PitchPlayerController {
+  constructor() {
+    this.playerEl = document.getElementById("pitch-player");
+    this.videoEl = document.getElementById("intro-video");
+    this.playOverlay = document.getElementById("pitch-play-overlay");
+    this.playToggleBtn = document.getElementById("pitch-play-toggle");
+    this.timelineBar = document.getElementById("pitch-timeline");
+    this.progressBar = document.getElementById("pitch-progress");
+    this.timerEl = document.getElementById("pitch-timer");
+    this.voiceToggleBtn = document.getElementById("pitch-voice-toggle");
+    this.restartBtn = document.getElementById("pitch-restart-btn");
+    this.chapterText = document.getElementById("pitch-chapter-text");
+    this.subtitlesText = document.getElementById("pitch-subtitles-text");
+    this.modeToggleBtn = document.getElementById("video-mode-toggle");
+    this.captionLabel = document.getElementById("video-caption-label");
 
-  // Graceful error fallback if user has not yet placed their mp4 video
-  video.addEventListener("error", () => {
-    console.info("Intro video file placeholder active at assets/intro.mp4. Replace with your actual video when ready!");
-  });
+    this.isPlaying = false;
+    this.currentTime = 0; // 0 to 60 seconds
+    this.totalDuration = 60; // 60 seconds
+    this.timerInterval = null;
+    this.voiceEnabled = true;
+    this.currentMode = "pitch"; // "pitch" or "mp4"
+
+    this.chapters = [
+      {
+        start: 0,
+        end: 12,
+        title: "CH 1: INTRODUCTION",
+        slide: 1,
+        speech: "Hello, I am Sathvika V P, an Artificial Intelligence and Data Science undergraduate at R M K Engineering College, graduating class of 2029. Curious by nature, builder by habit."
+      },
+      {
+        start: 12,
+        end: 24,
+        title: "CH 2: AI & RAG SYSTEMS",
+        slide: 2,
+        speech: "I build practical AI applications, including FileBot, a retrieval augmented generation chatbot for document intelligence, and automated resume ranking engines using semantic similarity."
+      },
+      {
+        start: 24,
+        end: 36,
+        title: "CH 3: HEALTHCARE ANALYTICS",
+        slide: 3,
+        speech: "I completed an intensive 155-hour healthcare data analytics internship at VirtualWorks Lab by Emogi, developing predictive models for pharmacy sales and automated data cleaning."
+      },
+      {
+        start: 36,
+        end: 48,
+        title: "CH 4: MEDIA & KAIZEN",
+        slide: 4,
+        speech: "Beyond code, I love dynamic video editing and motion storytelling, and I am learning beginner Japanese while embracing continuous improvement, or Kaizen."
+      },
+      {
+        start: 48,
+        end: 60,
+        title: "CH 5: LET'S COLLABORATE",
+        slide: 5,
+        speech: "I love collecting engineering challenges and collaborating with fellow builders. Connect with me on LinkedIn, GitHub, or email at sathvikavp2020@gmail.com!"
+      }
+    ];
+
+    this.slides = document.querySelectorAll(".pitch-slide");
+    this.init();
+  }
+
+  init() {
+    if (!this.playerEl) return;
+
+    // Overlay play click
+    if (this.playOverlay) {
+      this.playOverlay.addEventListener("click", () => this.play());
+    }
+
+    // Toggle button click
+    if (this.playToggleBtn) {
+      this.playToggleBtn.addEventListener("click", () => this.togglePlay());
+    }
+
+    // Timeline scrubber click
+    if (this.timelineBar) {
+      this.timelineBar.addEventListener("click", (e) => this.handleTimelineClick(e));
+    }
+
+    // Voice toggle
+    if (this.voiceToggleBtn) {
+      this.voiceToggleBtn.addEventListener("click", () => this.toggleVoice());
+    }
+
+    // Restart button
+    if (this.restartBtn) {
+      this.restartBtn.addEventListener("click", () => this.restart());
+    }
+
+    // Mode Switcher (Interactive Pitch vs Raw MP4)
+    if (this.modeToggleBtn) {
+      this.modeToggleBtn.addEventListener("click", () => this.toggleMode());
+    }
+
+    // Video error handling for raw mp4 mode
+    if (this.videoEl) {
+      this.videoEl.addEventListener("error", () => {
+        console.info("Notice: assets/intro.mp4 placeholder is ready for your uploaded H.264 video.");
+      });
+    }
+
+    // Render initial state
+    this.updateUI();
+  }
+
+  play() {
+    if (this.currentMode === "mp4" && this.videoEl) {
+      this.videoEl.play().catch(() => {});
+      return;
+    }
+
+    this.isPlaying = true;
+    this.playerEl.classList.add("is-playing");
+    if (this.playToggleBtn) this.playToggleBtn.textContent = "⏸";
+
+    if (this.currentTime >= this.totalDuration) {
+      this.currentTime = 0;
+    }
+
+    // Start playback interval (every 250ms = 0.25s)
+    clearInterval(this.timerInterval);
+    this.timerInterval = setInterval(() => {
+      this.currentTime += 0.25;
+      if (this.currentTime >= this.totalDuration) {
+        this.currentTime = this.totalDuration;
+        this.pause();
+      }
+      this.updateUI();
+    }, 250);
+
+    this.speakCurrentChapter();
+    this.playSynthTone(440, 0.1);
+  }
+
+  pause() {
+    this.isPlaying = false;
+    clearInterval(this.timerInterval);
+    if (this.playerEl) this.playerEl.classList.remove("is-playing");
+    if (this.playToggleBtn) this.playToggleBtn.textContent = "▶";
+
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+  }
+
+  togglePlay() {
+    if (this.isPlaying) {
+      this.pause();
+    } else {
+      this.play();
+    }
+  }
+
+  restart() {
+    this.currentTime = 0;
+    this.updateUI();
+    this.play();
+  }
+
+  handleTimelineClick(e) {
+    const rect = this.timelineBar.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+    this.currentTime = Math.round(ratio * this.totalDuration);
+    this.updateUI();
+    if (this.isPlaying) {
+      this.speakCurrentChapter();
+    }
+  }
+
+  toggleVoice() {
+    this.voiceEnabled = !this.voiceEnabled;
+    if (this.voiceToggleBtn) {
+      this.voiceToggleBtn.textContent = this.voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
+    }
+    if (!this.voiceEnabled && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    } else if (this.voiceEnabled && this.isPlaying) {
+      this.speakCurrentChapter();
+    }
+  }
+
+  toggleMode() {
+    if (this.currentMode === "pitch") {
+      this.pause();
+      this.currentMode = "mp4";
+      this.playerEl.style.display = "none";
+      if (this.videoEl) {
+        this.videoEl.style.display = "block";
+        this.videoEl.play().catch(() => {});
+      }
+      if (this.modeToggleBtn) this.modeToggleBtn.textContent = "Switch to 60s Pitch Mode";
+      if (this.captionLabel) this.captionLabel.textContent = "🎬 Raw MP4 Video Player (assets/intro.mp4)";
+    } else {
+      if (this.videoEl) {
+        this.videoEl.pause();
+        this.videoEl.style.display = "none";
+      }
+      this.currentMode = "pitch";
+      this.playerEl.style.display = "flex";
+      if (this.modeToggleBtn) this.modeToggleBtn.textContent = "Switch to MP4 Video";
+      if (this.captionLabel) this.captionLabel.textContent = "🎬 60-Second Interactive Elevator Pitch";
+      this.updateUI();
+    }
+  }
+
+  updateUI() {
+    // Progress %
+    const pct = Math.min(100, (this.currentTime / this.totalDuration) * 100);
+    if (this.progressBar) {
+      this.progressBar.style.width = `${pct}%`;
+    }
+
+    // Time text
+    const secs = Math.floor(this.currentTime);
+    const mins = Math.floor(secs / 60);
+    const remSecs = secs % 60;
+    const formatted = `${String(mins).padStart(2, "0")}:${String(remSecs).padStart(2, "0")}`;
+    if (this.timerEl) {
+      this.timerEl.textContent = `${formatted} / 01:00`;
+    }
+
+    // Find current chapter
+    const currentChapter = this.chapters.find(
+      (c) => this.currentTime >= c.start && this.currentTime < c.end
+    ) || this.chapters[this.chapters.length - 1];
+
+    if (this.chapterText && currentChapter) {
+      this.chapterText.textContent = currentChapter.title;
+    }
+
+    if (this.subtitlesText && currentChapter) {
+      this.subtitlesText.textContent = `"${currentChapter.speech}"`;
+    }
+
+    // Active slide
+    if (currentChapter) {
+      this.slides.forEach((s) => {
+        const slideIdx = parseInt(s.getAttribute("data-slide"), 10);
+        if (slideIdx === currentChapter.slide) {
+          s.classList.add("is-active");
+        } else {
+          s.classList.remove("is-active");
+        }
+      });
+    }
+  }
+
+  speakCurrentChapter() {
+    if (!this.voiceEnabled || !window.speechSynthesis) return;
+
+    window.speechSynthesis.cancel();
+
+    const currentChapter = this.chapters.find(
+      (c) => this.currentTime >= c.start && this.currentTime < c.end
+    );
+
+    if (!currentChapter) return;
+
+    const utterance = new SpeechSynthesisUtterance(currentChapter.speech);
+    utterance.rate = 1.05;
+    utterance.pitch = 1.05;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  playSynthTone(freq = 520, duration = 0.08) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, ctx.currentTime);
+      gain.gain.setValueAtTime(0.05, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + duration);
+    } catch (e) {
+      // AudioContext policy on unmuted interaction
+    }
+  }
 }
+
+function initVideoPlayer() {
+  window.PitchPlayer = new PitchPlayerController();
+}
+
+window.playIntroPitch = function () {
+  if (window.PitchPlayer) {
+    window.PitchPlayer.play();
+  }
+};
+
+window.pauseIntroPitch = function () {
+  if (window.PitchPlayer) {
+    window.PitchPlayer.pause();
+  }
+};
 
 // ==========================================
 // DOM READY INITIALIZATION

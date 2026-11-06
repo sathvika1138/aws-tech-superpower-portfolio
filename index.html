@@ -130,15 +130,132 @@
                 Update 'poster="assets/intro-poster.jpg"' with your video thumbnail.
                 ==================================================================
               -->
-              <div class="video-element-container">
-                <video id="intro-video" class="intro-video" controls preload="none" poster="assets/intro-poster.jpg" playsinline>
+              <div class="video-element-container" id="video-element-container">
+                <!-- 60-Second Virtual Interactive Pitch Player -->
+                <div class="pitch-player" id="pitch-player" role="region" aria-label="60-Second Video Intro Presentation">
+                  <!-- Top Bar -->
+                  <div class="pitch-top-bar">
+                    <span class="pitch-chapter-pill">
+                      <span class="pitch-live-dot" aria-hidden="true"></span>
+                      <span id="pitch-chapter-text">CH 1: INTRODUCTION</span>
+                    </span>
+                    <div class="pitch-waveform" aria-hidden="true">
+                      <span class="wave-bar"></span>
+                      <span class="wave-bar"></span>
+                      <span class="wave-bar"></span>
+                      <span class="wave-bar"></span>
+                      <span class="wave-bar"></span>
+                    </div>
+                  </div>
+
+                  <!-- Big Play Button Overlay -->
+                  <button type="button" class="pitch-play-overlay" id="pitch-play-overlay" aria-label="Play 60-Second Elevator Pitch">
+                    <span aria-hidden="true">▶</span>
+                  </button>
+
+                  <!-- Slide Content (00:00 to 01:00) -->
+                  <div class="pitch-content-wrap">
+                    <!-- Slide 1 (00s - 12s) -->
+                    <div class="pitch-slide is-active" data-slide="1">
+                      <span class="pitch-slide-tag">THE CURIOUS BUILDER</span>
+                      <h3 class="pitch-slide-title">Hello, I'm Sathvika V P</h3>
+                      <p class="pitch-slide-body">
+                        Artificial Intelligence &amp; Data Science undergraduate at R.M.K. Engineering College (Class of 2029). "Curious by nature. Builder by habit."
+                      </p>
+                      <div class="pitch-slide-badges">
+                        <span class="pitch-badge-item">AI &amp; Data Science</span>
+                        <span class="pitch-badge-item">R.M.K. Engineering College</span>
+                        <span class="pitch-badge-item">Class of 2029</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2 (12s - 24s) -->
+                    <div class="pitch-slide" data-slide="2">
+                      <span class="pitch-slide-tag">PRACTICAL AI &amp; RAG SYSTEMS</span>
+                      <h3 class="pitch-slide-title">FileBot &amp; Resume Ranking</h3>
+                      <p class="pitch-slide-body">
+                        Built FileBot (RAG Chatbot using LangChain, ChromaDB &amp; FAISS for PDF intelligence) and an AI-powered resume screening dashboard using NLP semantic similarity.
+                      </p>
+                      <div class="pitch-slide-badges">
+                        <span class="pitch-badge-item">RAG Chatbots</span>
+                        <span class="pitch-badge-item">LangChain</span>
+                        <span class="pitch-badge-item">Vector Databases</span>
+                        <span class="pitch-badge-item">Streamlit</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 3 (24s - 36s) -->
+                    <div class="pitch-slide" data-slide="3">
+                      <span class="pitch-slide-tag">HEALTHCARE DATA ANALYTICS</span>
+                      <h3 class="pitch-slide-title">155-Hour Industry Internship</h3>
+                      <p class="pitch-slide-body">
+                        Completed at VirtualWorks Lab by Emogi. Developed predictive models for pharmacy sales velocity and automated medical dataset cleaning pipelines.
+                      </p>
+                      <div class="pitch-slide-badges">
+                        <span class="pitch-badge-item">Python &amp; Pandas</span>
+                        <span class="pitch-badge-item">Medical Data Cleaning</span>
+                        <span class="pitch-badge-item">Predictive Analytics</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 4 (36s - 48s) -->
+                    <div class="pitch-slide" data-slide="4">
+                      <span class="pitch-slide-tag">CREATIVITY &amp; CONTINUOUS GROWTH</span>
+                      <h3 class="pitch-slide-title">Video Editing &amp; Japanese</h3>
+                      <p class="pitch-slide-body">
+                        Storytelling through dynamic pacing, motion graphics, and audio editing (Blue Belt). Embracing continuous improvement (Kaizen) while learning beginner Japanese.
+                      </p>
+                      <div class="pitch-slide-badges">
+                        <span class="pitch-badge-item">Video Editing (Blue Belt)</span>
+                        <span class="pitch-badge-item">Japanese Language</span>
+                        <span class="pitch-badge-item">Kaizen (改善)</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 5 (48s - 60s) -->
+                    <div class="pitch-slide" data-slide="5">
+                      <span class="pitch-slide-tag">COLLABORATION &amp; CHALLENGES</span>
+                      <h3 class="pitch-slide-title">Let's Build Something Meaningful</h3>
+                      <p class="pitch-slide-body">
+                        Passionate about tackling real-world problems. Explore the terminal or collect stamps in my Curiosity Passport below!
+                      </p>
+                      <div class="pitch-slide-badges">
+                        <span class="pitch-badge-item">sathvikavp2020@gmail.com</span>
+                        <span class="pitch-badge-item">github.com/sathvika1138</span>
+                        <span class="pitch-badge-item">LinkedIn Connected</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Subtitle / Closed-Caption bar -->
+                  <div class="pitch-caption-bar">
+                    <span class="pitch-caption-icon" aria-hidden="true">💬</span>
+                    <span id="pitch-subtitles-text">"Hi, I'm Sathvika, an Artificial Intelligence &amp; Data Science student at R.M.K..."</span>
+                  </div>
+
+                  <!-- Bottom Controls Bar -->
+                  <div class="pitch-controls-bar">
+                    <button type="button" class="pitch-btn" id="pitch-play-toggle" aria-label="Play or Pause">▶</button>
+                    <div class="pitch-timeline-wrap" id="pitch-timeline" title="Click to scrub timeline">
+                      <div class="pitch-timeline-progress" id="pitch-progress"></div>
+                    </div>
+                    <span class="pitch-timer" id="pitch-timer">00:00 / 01:00</span>
+                    <button type="button" class="pitch-voice-toggle" id="pitch-voice-toggle" title="Toggle audio voice narration">🔊 Voice On</button>
+                    <button type="button" class="pitch-btn" id="pitch-restart-btn" aria-label="Restart Video" title="Restart">↺</button>
+                  </div>
+                </div>
+
+                <!-- Raw MP4 Video Element (Hidden by default, can be toggled) -->
+                <video id="intro-video" class="intro-video" controls preload="none" poster="assets/intro-poster.jpg" playsinline style="display: none;">
                   <source src="assets/intro.mp4" type="video/mp4">
                   <p>Your browser doesn't support HTML5 video. Here is a <a href="assets/intro.mp4">link to the video</a> instead.</p>
                 </video>
               </div>
+
+              <!-- Caption with Mode Switcher -->
               <div class="video-caption">
-                <span>🎬 Quick 60-Second Video Intro</span>
-                <span class="video-hint-pill">Click to Play</span>
+                <span id="video-caption-label">🎬 60-Second Interactive Elevator Pitch</span>
+                <button type="button" class="video-hint-pill" id="video-mode-toggle" title="Switch between Interactive Pitch and raw MP4 video">Switch to MP4 Video</button>
               </div>
             </div>
           </div>
